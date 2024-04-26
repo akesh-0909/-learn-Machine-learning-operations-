@@ -2,4 +2,8 @@ pandas
 numpy
 seaborn
 mlflow
--e .
+matplotlib
+scikit-learn
+catboost
+xgboost
+# -e . # to build the package
