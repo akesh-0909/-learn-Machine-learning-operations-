@@ -8,4 +8,6 @@
             - add remote repo
 
         -b) setup.py
-        -c) requirement.txt  
+        -c) requirement.txt 
+## tutorial 2
+    logging and exceptional handeling
