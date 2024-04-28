@@ -26,7 +26,7 @@ class DataTranasformation:
     def get_data_transformer_object(self):
         """ This function is responsible for data transformation
         """
-        print("test 3")
+       
         
         try:
             numerical_features = [
@@ -43,15 +43,15 @@ class DataTranasformation:
             numerical_pipeline = Pipeline(
                 steps=[
                     ("imputer", SimpleImputer(strategy="median")),
-                    ("scaler", StandardScaler())
+                    ("scaler", StandardScaler(with_mean=False))
                 ])
             logging.info("Numerical features Pipeline Created Successfully")
 
             categorical_pipeline = Pipeline(
                 steps=[
                     ("imputer", SimpleImputer(strategy="most_frequent")),
-                    ("one hot encoder", OneHotEncoder(sparse_output=False)), # if sparce_output is not used, then use with_mean =False in all STandard scalars
-                    ("scaler", StandardScaler())
+                    ("one hot encoder", OneHotEncoder()), # if sparce_output is not used, then use with_mean =False in all STandard scalars
+                    ("scaler", StandardScaler(with_mean=False))
                 ]
             )
             logging.info(
@@ -95,10 +95,9 @@ class DataTranasformation:
             
             logging.info("Applying Preprocessor pipeline on train and test set")
             
-            print(input_features_train_df)
-            print("test:1")
+      
             input_features_train_arrary = preprocessing_obj.fit_transform(input_features_train_df)
-            print('test 2')
+
             input_features_test_array  = preprocessing_obj.transform(input_features_test_df)
             
             
