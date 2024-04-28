@@ -19,6 +19,17 @@ def save_object(file_path,obj):
     except Exception as e:
         logging.ERROR(e)
         raise CustomException(e)
+    
+def load_object(file_pkl):
+    try:
+        with open(file_pkl,'rb' ) as file_object:
+            return dill.load(file_object)
+    except Exception as e:
+        logging.error('Fail to load object')
+        raise CustomException(e)
+        
+        
+        
         
 def evaluate_models(X_train,Y_train,X_test,Y_test,models,params):
     try:
@@ -52,3 +63,4 @@ def evaluate_models(X_train,Y_train,X_test,Y_test,models,params):
         
         logging.error(e)
         raise CustomException(e)
+    

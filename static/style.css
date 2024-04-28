@@ -1,0 +1,81 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif; /* Sets the font across the page */
+    background-color: #f4f4f9; /* Light gray background color */
+    color: #333; /* Dark gray text color */
+    margin: 0;
+    padding: 20px;
+}
+
+/* Styles for the main container */
+.login {
+    width: 80%;
+    max-width: 600px; /* Limits the form width */
+    margin: 20px auto; /* Centers the form horizontally and adds vertical spacing */
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow around the form */
+    background: white; /* White background for the form area */
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Header styles */
+.login h1 {
+    text-align: center; /* Centers the text */
+    color: #0056b3; /* Dark blue color for contrast */
+}
+
+/* Style for form legend */
+legend {
+    font-size: 1.2em; /* Slightly larger text for emphasis */
+    margin-bottom: 10px; /* Adds space below the legend */
+}
+
+/* Form element container styles */
+.mb-3 {
+    margin-bottom: 16px; /* Adds bottom margin for spacing */
+}
+
+/* Form label styles */
+.label, .form-label {
+    display: block; /* Ensures the label is on its own line */
+    margin-bottom: 5px; /* Small space between label and input */
+    font-weight: bold; /* Makes the text bold */
+}
+
+/* Form input and select box styles */
+.input, .form-control {
+    width: 100%; /* Ensures it fills the container */
+    padding: 8px; /* Adds padding inside the input/select */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Rounded borders for the inputs */
+}
+
+/* Placeholder option styling */
+.placeholder {
+    color: #888; /* Light gray text color for placeholders */
+}
+
+/* Button styles */
+.btn-primary {
+    background-color: #007bff; /* Blue background for primary buttons */
+    color: white; /* White text color */
+    border: none; /* No border */
+    padding: 10px 20px; /* Horizontal and vertical padding */
+    text-transform: uppercase; /* Uppercase text */
+    cursor: pointer; /* Pointer cursor on hover */
+    display: inline-block; /* Allows it to be inline but with block properties */
+    border-radius: 4px; /* Rounded button edges */
+    margin-top: 10px; /* Space above the button */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive media query */
+@media (max-width: 768px) {
+    .login {
+        width: 90%; /* More width for smaller screens */
+        padding: 10px; /* Less padding on smaller screens */
+    }
+}
